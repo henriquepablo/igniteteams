@@ -4,7 +4,7 @@ import { SafeAreaView, Text, View } from 'react-native';
 
 function App(): React.JSX.Element {
 	return (
-		<View>
+		<View style={{flex: 1}}>
 			<SafeAreaView />
 			<Groups />
 		</View>
