@@ -9,7 +9,7 @@ import ListEmpty from '@components/ListEmpty';
 
 const Groups: React.FC = () => {
 
-	const [ groups, setGroups ] = useState<string[]>([]);
+const [ groups, setGroups ] = useState<string[]>([]);
 	
 	return (
 		<Container>
