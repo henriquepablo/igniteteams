@@ -1,12 +1,10 @@
 import type React from 'react';
-import { Container, Title } from './styles';
+import { Container} from './styles';
 
 const Groups: React.FC = () => {
 	return (
 		<Container>
-			<Title>
-				Groups
-			</Title>
+
 		</Container>
 	);
 };

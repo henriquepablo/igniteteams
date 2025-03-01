@@ -6,8 +6,8 @@ import { ThemeProvider } from 'styled-components';
 
 function App(): React.JSX.Element {
 	return (
-		<ThemeProvider theme={{theme}}>
-			<SafeAreaView />
+		<ThemeProvider theme={theme}>
+			<SafeAreaView style={{backgroundColor: theme.colors.gray_600}}/>
 			<Groups />
 		</ThemeProvider>
 	);
