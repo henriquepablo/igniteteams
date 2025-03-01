@@ -1,12 +1,11 @@
 import type React from 'react';
-import { Container, Title } from './styles';
+import { Container } from './styles';
+import Header from '@components/Header';
 
 const Groups: React.FC = () => {
 	return (
 		<Container>
-			<Title>
-				Groups
-			</Title>
+			<Header />
 		</Container>
 	);
 };
