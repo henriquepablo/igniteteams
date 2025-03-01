@@ -5,6 +5,8 @@ import Header from '@components/Header';
 import Highlight from '@components/highlight';
 import GroupCard from '@components/GroupCard';
 import { useState } from 'react';
+import ListEmpty from '@components/ListEmpty';
+
 const Groups: React.FC = () => {
 
 	const [ groups, setGroups ] = useState<string[]>([]);
@@ -21,6 +23,10 @@ const Groups: React.FC = () => {
 					<GroupCard title={ item } />
 				)}
 				keyExtractor={ item => item }
+				contentContainerStyle={groups.length === 0 && { flex: 1 }}
+				ListEmptyComponent={
+					<ListEmpty message='Nenhuma turma foi registrada.'/>
+				}
 			/>
 
 		</Container>
