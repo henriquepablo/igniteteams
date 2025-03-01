@@ -3,6 +3,7 @@ import type React from 'react';
 import { SafeAreaView } from 'react-native';
 import theme from './src/theme';
 import { ThemeProvider } from 'styled-components';
+import Loading from '@components/Loading';
 
 function App(): React.JSX.Element {
 	return (
