@@ -17,8 +17,8 @@ export default {
         gray_100: '#e1e1e6',
     },
     font_family: {
-        roboto: 'Roboto_400Regular',
-        bold: 'Roboto_700Bold',
+        regular: 'Roboto-Regular',
+        bold: 'Roboto-Bold',
     },
     font_size: {
         sm: 14,
