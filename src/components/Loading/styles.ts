@@ -1,5 +1,5 @@
-import styled from "styled-components/native";
-import theme from "../../theme";
+import styled from 'styled-components/native';
+import theme from '../../theme';
 
 export const Container = styled.View`
     flex: 1;
@@ -9,5 +9,5 @@ export const Container = styled.View`
 `;
 
 export const LoaingIndicator = styled.ActivityIndicator.attrs(() => ({
-    color: theme.colors.green_700,
+	color: theme.colors.green_700,
 }))``;

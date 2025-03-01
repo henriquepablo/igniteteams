@@ -1,11 +1,11 @@
-import { Container, LoaingIndicator } from "./styles";
+import { Container, LoaingIndicator } from './styles';
 
 const Loading: React.FC = () => {
-    return (
-        <Container>
-            <LoaingIndicator/>
-        </Container>
-    );
+	return (
+		<Container>
+			<LoaingIndicator />
+		</Container>
+	);
 };
 
 export default Loading;
