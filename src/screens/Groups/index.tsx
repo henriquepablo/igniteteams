@@ -1,3 +1,4 @@
+import Button from '@components/Button';
 import GroupCard from '@components/GroupCard';
 import Header from '@components/Header';
 import ListEmpty from '@components/ListEmpty';
@@ -25,6 +26,8 @@ const Groups: React.FC = () => {
 					<ListEmpty message="Nenhuma turma foi registrada." />
 				}
 			/>
+
+			<Button title="Criar nova turma" />
 		</Container>
 	);
 };
