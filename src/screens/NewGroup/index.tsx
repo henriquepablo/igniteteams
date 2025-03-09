@@ -17,6 +17,8 @@ const NewGroup: React.FC = () => {
 					subtitle="Crie a turma para adicionar as pessoas."
 				/>
 
+				<Input />
+
 				<Button title="Criar" style={{ marginTop: 20 }} />
 			</Content>
 		</Container>
