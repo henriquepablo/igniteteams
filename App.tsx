@@ -1,6 +1,7 @@
 import Loading from '@components/Loading';
 import Groups from '@screens/Groups';
 import NewGroup from '@screens/NewGroup';
+import Players from '@screens/Players';
 import type React from 'react';
 import { SafeAreaView } from 'react-native';
 import { ThemeProvider } from 'styled-components';
@@ -10,7 +11,7 @@ function App(): React.JSX.Element {
 	return (
 		<ThemeProvider theme={theme}>
 			<SafeAreaView style={{ backgroundColor: theme.colors.gray_600 }} />
-			<NewGroup />
+			<Players />
 		</ThemeProvider>
 	);
 }
