@@ -4,9 +4,10 @@ import Header from '@components/Header';
 import GroupCard from '@components/GroupCard';
 import { useState } from 'react';
 import { FlatList } from 'react-native';
+import ListEmpty from '@components/ListEmpty';
 
 export default function Groups() {
-  const [ groups, setGroups ] = useState<string[]>(['Rocketseat', 'Amigos']);
+  const [ groups, setGroups ] = useState<string[]>([]);
 
   return (
     <Container>
@@ -23,6 +24,8 @@ export default function Groups() {
 
           />
         )}
+        contentContainerStyle={groups.length === 0 && { flex: 1 }}
+        ListEmptyComponent={() => <ListEmpty message='Cadastre a primeira turma'/>}
       />
     </Container>
   );
