@@ -7,7 +7,7 @@ export type FilterStyleProps = {
 }
 
 export const Container = styled(TouchableOpacity)<FilterStyleProps>`
-    border: 1px solid ${({isActive}) => isActive ? theme.COLORS.GREEN_700 : ''};
+    border: 1px solid ${({isActive}) => isActive ? theme.COLORS.GREEN_700 : theme.COLORS.GRAY_600};
     border-radius: 4px;
     margin-right: 12px;
     height: 38px;
