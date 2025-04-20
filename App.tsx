@@ -5,7 +5,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from "@expo-google-fonts/
 import Loading from "@components/Loading";
 import { SafeAreaView, StatusBar } from "react-native";
 import NewGroup from "@screens/NewGroup";
-import Players from "@components/Players";
+import Players from "@screens/Players";
 
 export default function App() {
 
