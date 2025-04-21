@@ -28,6 +28,10 @@ export default function Groups() {
     } 
   }
 
+  function handleOpenGroup(nameGroup: string) {
+    navigation.navigate('players', { group: nameGroup })
+  }
+
   useFocusEffect(useCallback(() => {
     fetchGroups();
   }, []));
@@ -44,7 +48,7 @@ export default function Groups() {
         keyExtractor={(item) => item}
         renderItem={({item}) =>  (
           <GroupCard title={item}
-
+            onPress={() => handleOpenGroup(item)}
           />
         )}
         contentContainerStyle={groups.length === 0 && { flex: 1 }}
