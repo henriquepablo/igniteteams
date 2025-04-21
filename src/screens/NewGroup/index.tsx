@@ -4,13 +4,15 @@ import Highlight from "@components/Highlight";
 import Button from "@components/Button";
 import Input from "@components/Input";
 import { useNavigation } from "@react-navigation/native";
+import { useState } from "react";
 
 export default function NewGroup() {
 
     const navigation = useNavigation();
+    const [group, setGroup] = useState<string>('');
 
     const handleNew = () => {
-        navigation.navigate('players', {group: ''})
+        navigation.navigate('players', {group: group})
     }
 
     return (
@@ -27,6 +29,7 @@ export default function NewGroup() {
 
                 <Input style={{marginBottom: 15}} 
                     placeholder="Nome da turma"
+                    onChangeText={setGroup}
                 />
 
                 <Button 
