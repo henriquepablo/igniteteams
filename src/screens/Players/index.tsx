@@ -4,8 +4,8 @@ import Highlight from "@components/Highlight";
 import ButtonIcon from "@components/ButtonIcon";
 import Input from "@components/Input";
 import Filter from "@components/Filter";
-import { Alert, FlatList } from "react-native";
-import { useEffect, useState } from "react";
+import { Alert, FlatList, TextInput } from "react-native";
+import { useEffect, useState, useRef } from "react";
 import PlayerCard from "@components/PlayerCard";
 import ListEmpty from "@components/ListEmpty";
 import Button from "@components/Button";
@@ -29,6 +29,8 @@ export default function Players() {
     const route = useRoute();
     const { group } = route.params as RouteParams;
 
+    const newPlayerInputRef = useRef<TextInput>(null);
+
     async function handleAddPlayer() {
         if(newPlayerName.trim().length === 0){
             return Alert.alert('Nova Pessoa', 'Informe o nome da pessoa para adicionar.');
@@ -41,6 +43,8 @@ export default function Players() {
 
         try {
             await playerAddByGroup(newPlayer, group);
+            newPlayerInputRef.current?.blur();
+            setNewPlayerName('');
 
         } catch (error) {
             if(error instanceof AppError) {
@@ -82,6 +86,10 @@ export default function Players() {
                     placeholder="Nome da pessoa"
                     autoCorrect={false}
                     onChangeText={setNewPlayerName}
+                    value={newPlayerName}
+                    inputRef={newPlayerInputRef}
+                    onSubmitEditing={handleAddPlayer}
+                    returnKeyType="done"
                 />
 
                 <ButtonIcon icon="add" onPress={handleAddPlayer}/>
